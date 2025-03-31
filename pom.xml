@@ -1,0 +1,63 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.depermitto</groupId>
+  <artifactId>pbook</artifactId>
+  <version>1.0</version>
+
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.release>17</maven.compiler.release>
+  </properties>
+
+  <build>
+	<sourceDirectory>src</sourceDirectory>
+	<plugins>
+	  <plugin>
+		<groupId>org.apache.maven.plugins</groupId>
+		<artifactId>maven-compiler-plugin</artifactId>
+		<version>3.14.0</version>
+	  </plugin>
+
+	  <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>exec-maven-plugin</artifactId>
+		<version>3.5.0</version>
+		<configuration>
+		  <mainClass>Main</mainClass>
+		</configuration>
+	  </plugin>
+
+	  <plugin>
+		<artifactId>maven-assembly-plugin</artifactId>
+		<version>3.7.1</version>
+		<configuration>
+		  <descriptorRefs>
+			<descriptorRef>jar-with-dependencies</descriptorRef>
+		  </descriptorRefs>
+		  <archive>
+			<manifest>
+			  <mainClass>Main</mainClass>
+			</manifest>
+		  </archive>
+		</configuration>
+		<executions>
+		  <execution>
+			<id>make-assembly</id>
+			<phase>package</phase>
+			<goals>
+			  <goal>single</goal>
+			</goals>
+		  </execution>
+		</executions>
+	  </plugin>
+	</plugins>
+  </build>
+
+  <dependencies>
+	<dependency>
+	  <groupId>org.apache.pdfbox</groupId>
+	  <artifactId>pdfbox</artifactId>
+	  <version>3.0.4</version>
+	</dependency>
+  </dependencies>
+</project>
