@@ -5,7 +5,7 @@
 See the download section for instructions on how to get the program on your system.
 
 #+BEGIN_SRC shell
-java -jar jbook.jar <PDF file>
+java -jar jbook.jar PDF(s)...
 #+END_SRC
 
 This command will create a PDF file called =booklet.pdf= in current working directory. For optimal results, use a dual-printing supported printer or see section below.
