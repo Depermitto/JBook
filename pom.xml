@@ -1,7 +1,7 @@
 <project>
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.depermitto</groupId>
-  <artifactId>jbook</artifactId>
+  <artifactId>JBook</artifactId>
   <version>1.0</version>
 
   <properties>
