@@ -62,7 +62,7 @@ public class Main {
                         Unless the '-q' option is passed, the booklet will automatically open in your default PDF viewer.
                         
                         how to print:
-                        0. run JBook on a PDF (pass '-b' if uncertain)
+                        0. run JBook on a PDF
                         1. open the print dialog
                         2. select '2 pages per sheet'
                         3. print odd pages

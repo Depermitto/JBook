@@ -39,13 +39,13 @@ public final class Actions {
                     var fileN = new File(args.get(n));
                     var filenameN = fileN.getName();
                     if (!fileN.exists()) {
-                        err(filenameN + " does not exist, skipping...");
+                        warn(filenameN + " does not exist, skipping...");
                         continue;
                     }
                     try (PDDocument docN = Loader.loadPDF(file)) {
                         pdfMergerUtility.appendDocument(doc, docN);
                     } catch (IOException ioe) {
-                        err(filenameN + " is not a PDF file, skipping...");
+                        warn(filenameN + " is not a PDF file, skipping...");
                     }
                 }
             }

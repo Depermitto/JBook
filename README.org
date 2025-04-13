@@ -1,31 +1,22 @@
-#+TITLE: JBook - small PDF utility
+#+TITLE: JBook - micro CLI tool for creating booklets
 #+AUTHOR: Piotr (Depermitto) Jabłoński
 #+DATE: 31.03.2025
 
-See the download section for instructions on how to get the program on your system.
+| Supports only PDF documents. Requires Java 17+.
+
+See the download section for instructions on how to get the program on your system. How to run:
 
 #+BEGIN_SRC shell
-java -jar jbook.jar PDF(s)...
+java -jar JBook.jar
 #+END_SRC
-
-This command will create a PDF file called =booklet.pdf= in current working directory. For optimal results, use a dual-printing supported printer or see section below.
-
-** Simplex printers
-
-   If you do not have access to a duplex printer, you have to follow the procedure below:
-
-   1) Print odd pages,
-   2) Flip, (Unless you have a very exotic printer, a 180° flip along the vertical axis will work)
-   3) Print even pages.
 
 * Download
 
-** Get it locally
-
-  Download from [[https://github.com/Depermitto/jbook/releases/][releases]] or grab using the terminal:
+** Get it the latest version
+  Download from [[https://github.com/Depermitto/jbook/releases/latest][releases]] manually or wget using the terminal:
 
   #+BEGIN_SRC shell
-  wget https://github.com/Depermitto/jbook/releases/download/v1.0/pbook-v1.0.jar
+  wget https://github.com/Depermitto/JBook/releases/download/v1.0/JBook.jar
   #+END_SRC
 
 ** Build from source
@@ -34,7 +25,7 @@ This command will create a PDF file called =booklet.pdf= in current working dire
   git clone https://github.com/Depermitto/jbook
   cd jbook
 
-  mvn package # create jbook.jar in current working directory
+  mvn package # creates JBook.jar in target/
   #+END_SRC
 
 * License
